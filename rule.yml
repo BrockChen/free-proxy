@@ -1,0 +1,12 @@
+version: 1
+rules:
+  - host: default
+    regex: '.*\.mp4'
+    option: use-local-response
+    content: data/480.mp4
+  - host: www.baidu.com
+    regex: '/sugrec$'
+    option: to-redis
+  - host: www.baidu.com
+    regex: '.*world='
+    option: to-redis
